@@ -1,16 +1,5 @@
-/* Declares functions for implmenting a dictionary.
- * CSC 357, Assignment 3
- * Given code, Winter '24
- * NOTE: Do not alter this file. */
+#include "node.h"
 
-/* Represents one key-value pair. */
-typedef struct Node {
-    char *key;
-    void *val;
-    struct Node *next;
-} Node;
-
-/* Represents a collection of key-value pairs. */
 typedef struct Dict {
     int cap;
     Node **arr;

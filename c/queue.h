@@ -1,14 +1,9 @@
-typedef struct Node2 {
-    char *key;
-    void *val;
-    struct Node2 *next;
-} Node2;
+#include "node.h"
 
-/* Represents a collection of key-value pairs. */
 typedef struct Queue {
     int size;
-    Node2 *head;
-    Node2 *tail;
+    Node *head;
+    Node *tail;
 } Queue;
 
 Queue *qCreate();

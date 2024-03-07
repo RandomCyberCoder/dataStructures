@@ -14,7 +14,7 @@ void qDestroy(Queue *queue){
         return;
     }
     else{
-        Node2 *tmp = NULL;
+        Node *tmp = NULL;
         while(queue->head != NULL){
             tmp = queue->head->next;
             free(queue->head);
@@ -37,7 +37,7 @@ void *qPop(Queue *queue){
     }
     else{
         void *ret = queue->head->val;
-        Node2 *tmp = queue->head;
+        Node *tmp = queue->head;
         queue->head = queue->head->next;
         free(tmp);
         (queue->size)--;
@@ -48,7 +48,7 @@ void qPush(Queue *queue, void *valAdd){
     if(queue == NULL){
         return;
     }
-    Node2 *ndAdd = (Node2 *)malloc(sizeof(Node2));
+    Node *ndAdd = (Node *)malloc(sizeof(Node));
     ndAdd->next = NULL;
     ndAdd->val = valAdd;
     ndAdd->key = NULL;
